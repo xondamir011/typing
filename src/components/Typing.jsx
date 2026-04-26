@@ -4,7 +4,6 @@ import { getRandomWords } from "../data/words";
 
 export default function Typing({ duration = 60 }) {
   const inputRef = useRef();
-  const { theme, setTheme } = useTheme();
 
   const [language, setLanguage] = useState("uz");
   const [text, setText] = useState(getRandomWords("uz", 120));

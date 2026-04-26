@@ -9,7 +9,6 @@ export default function App() {
   const wordsForTyping = getRandomWords(language, 50);
 
   return (
-    <ThemeProvider>
   <div className="min-h-screen flex flex-col items-center pt-6 px-3 sm:px-6">
 
     {/* 🔝 TOP SECTION */}
@@ -58,6 +57,5 @@ export default function App() {
     </div>
 
   </div>
-</ThemeProvider>
   );
 }
