@@ -2,7 +2,6 @@ import { useState } from "react";
 import TopBar from "./components/TopBar";
 import Typing from "./components/Typing";
 import { getRandomWords } from "./data/words";
-import { ThemeProvider } from "./components/theme";
 
 export default function App() {
   const [time, setTime] = useState(15);
