@@ -220,7 +220,7 @@ export default function Typing({ duration = 60 }) {
         <span>{accuracy}%</span>
       </div>
 
-      <p className="text-2xl font-mono text-center max-w-4xl">
+      <p className="text-3xl font-mono text-center max-w-4xl">
         {renderText()}
       </p>
 

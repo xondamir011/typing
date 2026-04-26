@@ -37,10 +37,8 @@ export default function App() {
           </svg>
         </div>
 
-        <ul
-          tabIndex={0}
-          className="dropdown-content bg-base-300 rounded-box z-50 w-44 p-2 shadow-2xl"
-        >
+        <ul tabIndex={0}
+          className="dropdown-content bg-base-300 rounded-box z-50 w-44 p-2 shadow-2xl">
           {["default", "retro", "synthwave", "valentine", "aqua"].map((t) => (
             <li key={t}>
               <input
