@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { getRandomWords } from "../data/words";
-import { useTheme } from "./theme";
+
 
 export default function Typing({ duration = 60 }) {
   const inputRef = useRef();
