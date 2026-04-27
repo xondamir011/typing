@@ -131,6 +131,40 @@ export default function Typing({ duration = 60 }) {
     );
   }
 
+  const cols = 20; // har qatorda nechta harf
+
+const renderGridText = () => {
+  return safeText.split("").map((char, i) => {
+    const x = i % cols;
+    const y = Math.floor(i / cols);
+
+    let color = "text-base-content/40";
+
+    if (i < typed.length) {
+      color = typed[i] === char ? "text-success" : "text-error";
+    }
+
+    const isCursor = i === typed.length;
+
+    return (
+      <div
+        key={i}
+        className="absolute font-mono text-lg"
+        style={{
+          left: `${x * 14}px`,
+          top: `${y * 28}px`,
+        }}
+      >
+        <span className={color}>{char}</span>
+
+        {isCursor && (
+          <span className="absolute left-0 top-0 w-2 h-5 bg-primary animate-pulse" />
+        )}
+      </div>
+    );
+  });
+};
+
   // MAIN SCREEN
   return (
     <div className="min-h-[100dvh] flex flex-col items-center justify-start pt-10 px-3"
